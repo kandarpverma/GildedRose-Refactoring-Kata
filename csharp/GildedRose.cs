@@ -21,6 +21,11 @@ namespace csharp
                         if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                         {
                             Items[i].Quality = Items[i].Quality - 1;
+                            // Performing update operation on Conjured items one more time as compared to normal items. 
+                            if (Items[i].Name.StartsWith("Conjured", System.StringComparison.CurrentCultureIgnoreCase))
+                            {
+                                Items[i].Quality = Items[i].Quality - 1;
+                            }
                         }
                     }
                 }
@@ -67,6 +72,11 @@ namespace csharp
                                 if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                                 {
                                     Items[i].Quality = Items[i].Quality - 1;
+                                    // Performing update operation on Conjured items one more time as compared to normal items. 
+                                    if (Items[i].Name.StartsWith("Conjured", System.StringComparison.CurrentCultureIgnoreCase))
+                                    {
+                                        Items[i].Quality = Items[i].Quality - 1;
+                                    }
                                 }
                             }
                         }
